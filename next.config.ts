@@ -84,18 +84,9 @@ const nextConfig: NextConfig = {
     ]
   },
 
-  // Set the asset prefix to your CDN URL in production
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://royzstore.com/' : '',
-//  assetPrefix:  '',
+  // No proxy needed - API runs as serverless functions in /api folder
   async rewrites() {
-    return process.env.NODE_ENV === 'development'
-      ? [
-          {
-            source: '/:path*',
-            destination: 'https://api.royzstore.com/:path*',
-          },
-        ]
-      : [];
+    return [];
   },
 };
 

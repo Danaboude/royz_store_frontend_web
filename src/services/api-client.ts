@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useUIStore } from '@/store/uiStore';
 import type { SubscriptionPackage } from '@/views/admin/SubscriptionPackagesTable';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 
 const apiClient = axios.create({
   baseURL: API_URL,
